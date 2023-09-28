@@ -1,3 +1,4 @@
-import {addNewUser, getLoggedInUser} from "./userRequests";
+import {addNewUser, getLoggedInUser,getCurrentUserHouses } from "./userRequests";
+import {getHouses, deleteHouse, createNewHouse, editHouse} from "./housesRequests";
 
-export {addNewUser, getLoggedInUser}
+export {addNewUser, getLoggedInUser, getCurrentUserHouses, getHouses, deleteHouse, createNewHouse, editHouse}

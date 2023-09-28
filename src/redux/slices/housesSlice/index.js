@@ -4,6 +4,7 @@ import {housesThunkExtraReducer} from "../../thunks/housesThunk";
 const initialState = {
     houses: [],
 }
+
 const  HousesSlice = createSlice({
     name: 'houses',
     initialState,

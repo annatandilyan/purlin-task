@@ -22,7 +22,7 @@ const HouseList = () => {
                 <h1>Houses</h1>
             </div>
             {!!userId && <button className='my-houses-button' onClick={() => {
-                navigate('/myProperties')
+                navigate('/my-houses')
             }}>My houses</button>}
             <div className='container'>
                 {houses?.map((elm, index) => (

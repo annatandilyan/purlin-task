@@ -3,8 +3,8 @@ import {useForm} from "react-hook-form";
 import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 
-import {closePopup} from "../../../redux/slices/popupSlice";
 import {useClickOutsideEffect} from "../../../helpers";
+import {closePopup} from "../../../redux/slices/popupSlice";
 import {addNewUserThunk, getLoggedInUserThunk} from "../../../redux/thunks/userThunk";
 
 import '../style.css'

@@ -16,3 +16,8 @@ export const getLoggedInUser = async ({login, password}) => {
     const data = await res.json()
     return data[0].id
 }
+export const getCurrentUserHouses = async (userId) => {
+    const res = await fetch(`${SERVER_URL}/houses?agentId_like=${userId}`)
+    const data = await res.json()
+    return data
+}

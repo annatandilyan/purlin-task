@@ -1,9 +1,9 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 
-import {getHouses} from "../../../requests/housesRequests";
+import {getHouses} from "../../../requests";
 
 export const getHousesThunk = createAsyncThunk(
-    'Properties/getProperties',
+    'Houses/getHouses',
     getHouses
 )
 const getHousesThunkFulfilled = (state, {payload}) => {

@@ -1,43 +1,60 @@
 {
   "users": [
     {
+      "id": 1,
       "login": "test",
       "password": "test",
       "name": "Mia",
-      "surname": "Smith",
-      "id": 1
+      "surname": "Smith"
     }
   ],
   "houses": [
     {
-      "City": "Los Angeles",
-      "Address": "123 Main Street",
-      "Zip": "90001",
-      "Price": 550000,
-      "Rooms": 3,
-      "Bathrooms": 2,
-      "LivingSqFt": 1600,
+      "id": 1,
+      "agentId": 1,
+      "city": "Los Angeles",
+      "address": "123 Main Street",
+      "zip": "90001",
+      "price": 550000,
+      "rooms": 3,
+      "bathrooms": 2,
+      "livingSqFt": 1600,
       "Other Details": "Spacious backyard, two-car garage, recently renovated"
     },
     {
-      "City": "Los Angeles",
-      "Address": "123 Main Street",
-      "Zip": "90001",
-      "Price": 550000,
-      "Rooms": 3,
-      "Bathrooms": 2,
-      "LivingSqFt": 1600,
+      "id": 2,
+      "agentId": 1,
+      "city": "Los Angeles",
+      "address": "123 Main Street",
+      "zip": "90001",
+      "price": 550000,
+      "rooms": 3,
+      "bathrooms": 2,
+      "livingSqFt": 1600,
       "Other Details": "Spacious backyard, two-car garage, recently renovated"
     },
     {
-      "City": "Los Angeles",
-      "Address": "123 Main Street",
-      "Zip": "90001",
-      "Price": 550000,
-      "Rooms": 3,
-      "Bathrooms": 2,
-      "LivingSqFt": 1600,
+      "id": 3,
+      "agentId": 1,
+      "city": "Los Angeles",
+      "address": "123 Main Street",
+      "zip": "90001",
+      "price": 550000,
+      "rooms": 3,
+      "bathrooms": 2,
+      "livingSqFt": 1600,
       "Other Details": "Spacious backyard, two-car garage, recently renovated"
+    },
+    {
+      "city": "test",
+      "address": "test",
+      "zip": "test",
+      "price": "test",
+      "rooms": "test",
+      "bathrooms": "test",
+      "livingSqFt": "test",
+      "agentId": "1",
+      "id": 4
     }
   ]
 }

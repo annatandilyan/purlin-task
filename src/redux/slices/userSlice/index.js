@@ -3,7 +3,7 @@ import {usersThunkExtraReducer} from "../../thunks/userThunk/index";
 
 const initialState = {
     userId: localStorage.getItem('userId'),
-    currentUserProperties:[]
+    currentUserHouses:[]
 }
 
 const UsersSlice = createSlice({
