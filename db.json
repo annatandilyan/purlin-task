@@ -46,15 +46,26 @@
       "Other Details": "Spacious backyard, two-car garage, recently renovated"
     },
     {
-      "city": "test",
-      "address": "test",
-      "zip": "test",
-      "price": "test",
-      "rooms": "test",
-      "bathrooms": "test",
+      "city": "test2",
+      "address": "test2",
+      "zip": "test3",
+      "price": "test4",
+      "rooms": "test2",
+      "bathrooms": "test2",
       "livingSqFt": "test",
       "agentId": "1",
       "id": 4
+    },
+    {
+      "city": "test2",
+      "address": "test2",
+      "zip": "test8",
+      "price": "test8",
+      "rooms": "test2",
+      "bathrooms": "test2",
+      "livingSqFt": "test",
+      "agentId": "1",
+      "id": 5
     }
   ]
 }

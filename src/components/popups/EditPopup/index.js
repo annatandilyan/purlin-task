@@ -62,25 +62,25 @@ const EditPopup = () => {
                 <input
                     className='popup-input'
                     placeholder='Price'
-                    defaultValue={data.price}
+                    defaultValue={data?.price}
                     {...register('price', {required: true})}
                 />
                 <input
                     className='popup-input'
                     placeholder='Rooms'
-                    defaultValue={data.rooms}
+                    defaultValue={data?.rooms}
                     {...register('rooms', {required: true})}
                 />
                 <input
                     className='popup-input'
                     placeholder='Bathrooms'
-                    defaultValue={data.bathrooms}
+                    defaultValue={data?.bathrooms}
                     {...register('bathrooms', {required: true})}
                 />
                 <input
                     className='popup-input'
                     placeholder='LivingSqFt'
-                    defaultValue={data.livingSqFt}
+                    defaultValue={data?.livingSqFt}
                     {...register('livingSqFt', {required: true})}
                 />
                 <div className='popup-buttons'>
