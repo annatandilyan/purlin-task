@@ -112,7 +112,7 @@ const EditPopup = () => {
                    />
                </div>
                 <div className='popup-buttons'>
-                    <Button type='submit'>Save</Button>
+                    <Button>Save</Button>
                     <Button variant="secondary" onClick={() => dispatch(closePopup())}>Cancel</Button>
                 </div>
             </form>
