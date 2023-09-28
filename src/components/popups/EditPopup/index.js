@@ -13,7 +13,7 @@ const EditPopup = () => {
     const {name, data} = useSelector(state => state.popup)
 
     const dispatch = useDispatch()
-   console.log(data)
+
     const {
         register,
         handleSubmit,
@@ -33,7 +33,7 @@ const EditPopup = () => {
         <div className={`popup ${name === 'edit' ? 'open' : ''}`}>
             <form className="popup-content" onSubmit={handleSubmit(editHouse)}>
                 <div>
-                    {errors.City && <p className="errorMessage"> City is required</p>}
+                    {errors.City && <span className="errorMessage"> City is required</span>}
                     <input
                         className='popup-input'
                         placeholder='City'

@@ -4,14 +4,24 @@
     gap: 16px;
     padding: 0 24px;
 }
+
+.house-list-container {
+    margin-top: 24px;
+}
+.actions {
+    text-align: right;
+    padding: 0 24px;
+}
+
 .my-houses-button {
-    position: absolute;
-    right: 5px;
-    top:5px;
     border: none;
+    margin-left: 24px;
+    margin-top: 6px;
     background-color: transparent;
     color: steelblue;
-    font-size: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
 
 }
 .header {

@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 
 import SingleHouse from "../SingleHouse";
 import {getHousesThunk} from "../../redux/thunks/housesThunk";
+import Button from "../Button";
 
 import './style.scss'
 const HouseList = () => {
@@ -20,6 +21,9 @@ const HouseList = () => {
         <>
             <header className='header'>
                 <h1>Houses</h1>
+                    {!!userId && <button className='my-houses-button' onClick={() => {
+                        navigate('/my-houses')
+                    }}>My houses</button>}
             </header>
             <div className='house-list-container'>
                 {houses?.map((elm, index) => (
