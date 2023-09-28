@@ -7,7 +7,8 @@ import {useClickOutsideEffect} from "../../../helpers";
 import {closePopup} from "../../../redux/slices/popupSlice";
 import {addNewUserThunk, getLoggedInUserThunk} from "../../../redux/thunks/userThunk";
 
-import '../style.css'
+import '../style.scss'
+import Button from "../../Button";
 const SignUpPopup = () => {
     const {name} = useSelector(state => state.popup)
 
@@ -24,7 +25,7 @@ const SignUpPopup = () => {
     const onSubmit = (data) => {
         name === 'login' ? dispatch(getLoggedInUserThunk(data)) : dispatch(addNewUserThunk(data))
         dispatch(closePopup())
-        navigate('/houses')
+        navigate('/my-houses')
     }
 
     return (
@@ -67,8 +68,8 @@ const SignUpPopup = () => {
                     />
                 </div>
                 <div className='popup-buttons'>
-                    <button>{name === 'signup' ? 'SignUp' : 'Login'}</button>
-                    <button onClick={() => dispatch(closePopup())}>Cancel</button>
+                    <Button>{name === 'signup' ? 'Sign Up' : 'Login'}</Button>
+                    <Button variant="secondary" onClick={() => dispatch(closePopup())}>Cancel</Button>
                 </div>
             </form>
         </div>

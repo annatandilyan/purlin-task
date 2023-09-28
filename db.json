@@ -20,41 +20,6 @@
       "bathrooms": 2,
       "livingSqFt": 1600,
       "Other Details": "Spacious backyard, two-car garage, recently renovated"
-    },
-    {
-      "id": 2,
-      "agentId": 1,
-      "city": "Los Angeles",
-      "address": "123 Main Street",
-      "zip": "90001",
-      "price": 550000,
-      "rooms": 3,
-      "bathrooms": 2,
-      "livingSqFt": 1600,
-      "Other Details": "Spacious backyard, two-car garage, recently renovated"
-    },
-    {
-      "id": 3,
-      "agentId": 1,
-      "city": "Los Angeles",
-      "address": "123 Main Street",
-      "zip": "90001",
-      "price": 550000,
-      "rooms": 3,
-      "bathrooms": 2,
-      "livingSqFt": 1600,
-      "Other Details": "Spacious backyard, two-car garage, recently renovated"
-    },
-    {
-      "city": "test",
-      "address": "test",
-      "zip": "test",
-      "price": "test",
-      "rooms": "test",
-      "bathrooms": "test",
-      "livingSqFt": "test",
-      "agentId": "1",
-      "id": 4
     }
   ]
 }

@@ -6,7 +6,8 @@ import {useClickOutsideEffect} from "../../../helpers";
 import {closePopup} from "../../../redux/slices/popupSlice";
 import { editHouseThunk} from "../../../redux/thunks/userThunk";
 
-import '../style.css'
+import '../style.scss'
+import Button from "../../Button";
 const EditPopup = () => {
     const userId = useSelector(state => state.users.userId)
     const {name, data} = useSelector(state => state.popup)
@@ -62,30 +63,30 @@ const EditPopup = () => {
                 <input
                     className='popup-input'
                     placeholder='Price'
-                    defaultValue={data.price}
+                    defaultValue={data?.price}
                     {...register('price', {required: true})}
                 />
                 <input
                     className='popup-input'
                     placeholder='Rooms'
-                    defaultValue={data.rooms}
+                    defaultValue={data?.rooms}
                     {...register('rooms', {required: true})}
                 />
                 <input
                     className='popup-input'
                     placeholder='Bathrooms'
-                    defaultValue={data.bathrooms}
+                    defaultValue={data?.bathrooms}
                     {...register('bathrooms', {required: true})}
                 />
                 <input
                     className='popup-input'
                     placeholder='LivingSqFt'
-                    defaultValue={data.livingSqFt}
+                    defaultValue={data?.livingSqFt}
                     {...register('livingSqFt', {required: true})}
                 />
                 <div className='popup-buttons'>
-                    <button>Edit</button>
-                    <button onClick={() => dispatch(closePopup())}>Cancel</button>
+                    <Button>Save</Button>
+                    <Button variant="secondary" onClick={() => dispatch(closePopup())}>Cancel</Button>
                 </div>
             </form>
         </div>

@@ -1,0 +1,42 @@
+.Button {
+  padding: 6px;
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+  color: white;
+  &.danger {
+    margin-left: 24px;
+    background-color: red;
+    color: white;
+    &:hover {
+      background-color: #ff4d4f;
+    }
+  }
+
+  &.primary {
+    background-color: #1d5fea;
+    &:hover {
+      background-color: #1a4ec1;
+    }
+  }
+  &.secondary {
+    background-color: #c3c1c1;
+    &:hover {
+      background-color: #a7a6a6;
+    }
+  }
+  &.success {
+    margin-left: 24px;
+    background-color: #10ca45;
+    color: white;
+    &:hover {
+      background-color: #3dac5d;
+    }
+  }
+  &.full-width {
+    width: 100%;
+  }
+}

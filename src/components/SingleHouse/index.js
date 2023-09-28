@@ -4,8 +4,9 @@ import {useDispatch} from "react-redux";
 import EditPopup from "../popups/EditPopup";
 import {openPopup} from "../../redux/slices/popupSlice";
 import {deleteHouseThunk} from "../../redux/thunks/userThunk";
+import Button from "../Button";
 
-import './style.css'
+import './style.scss'
 
 const SingleHouse = (props) => {
     const dispatch = useDispatch()
@@ -15,38 +16,66 @@ const SingleHouse = (props) => {
         <>
             <div className='house-card'>
                 <div className='house-data'>
-                    <p>City-{city}</p>
+                    <strong>
+                        City :
+                    </strong>
+                    <span>{city}</span>
                 </div>
                 <div className='house-data'>
-                    <p>Address-{address}</p>
+                    <strong>
+                        Address :
+                    </strong>
+                    <span>{address}</span>
                 </div>
                 <div className='house-data'>
-                    <p>Zip-{zip}</p>
+                    <strong>
+                        Zip Code :
+                    </strong>
+                    <span>{zip}</span>
                 </div>
                 <div className='house-data'>
-                    <p>Price-${price}</p>
+                    <strong>
+                        Price :
+                    </strong>
+                    <span>{price}</span>
                 </div>
                 <div className='house-data'>
-                    <p>Rooms-{rooms}</p>
+                    <strong>
+                        Rooms :
+                    </strong>
+                    <span>{rooms}</span>
                 </div>
                 <div className='house-data'>
-                    <p>Bathrooms-{bathrooms}</p>
+                    <strong>
+                        Bathrooms :
+                    </strong>
+                    <span>{bathrooms}</span>
                 </div>
                 <div className='house-data'>
-                    <p>LivingSqFt-{livingSqFt}</p>
+                    <strong>
+                        LivingSqFt :
+                    </strong>
+                    <span>{livingSqFt}</span>
                 </div>
                 {
                     props.isUser && <div className='house-buttons'>
-                        <button onClick={(e) => {
+                        <Button onClick={(e) => {
                             e.stopPropagation()
                             dispatch(openPopup({name: 'edit', data: {city, price, address, zip, rooms, bathrooms, id, livingSqFt}}))
-                        }}>Edit
-                        </button>
-                        <button className='button-remove' onClick={(e) => {
-                            e.stopPropagation()
-                            dispatch(deleteHouseThunk(id))
-                        }}>Delete
-                        </button>
+                            }}
+                            variant="primary"
+                        >
+                            Edit
+                        </Button>
+                        <Button
+                            onClick={(e) => {
+                                e.stopPropagation()
+                                dispatch(deleteHouseThunk(id))
+                            }}
+                            variant="danger"
+                        >
+                            Delete
+                        </Button>
                     </div>
                 }
             </div>

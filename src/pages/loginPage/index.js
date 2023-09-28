@@ -3,8 +3,10 @@ import {useNavigate} from "react-router-dom";
 
 import {openPopup} from "../../redux/slices/popupSlice";
 import SignUpPopup from "../../components/popups/SignUpPopup";
+import Button from "../../components/Button";
 
-import './style.css'
+import './style.scss';
+
 const LoginPage = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -20,17 +22,28 @@ const LoginPage = () => {
                 This page has become an integral part of the house industry,
                 streamlining the process of buying and selling properties in the digital age.</p>
             <div className='login-buttons'>
-                <button onClick={(e) => {
-                    e.stopPropagation()
-                    dispatch(openPopup({name: 'login'}))
-                }} className='login-button'>Log in
-                </button>
-                <button onClick={(e) => {
-                    e.stopPropagation()
-                    dispatch(openPopup({name: 'signup'}))
-                }} className='login-button'>Sign up
-                </button>
-                <button onClick={() => navigate('/houses')} className='login-button'>Skip</button>
+                <Button
+                    fullWidth
+                    onClick={(e) => {
+                        e.stopPropagation()
+                        dispatch(openPopup({name: 'login'}))
+                    }}
+                    className='login-button'>Log in
+                </Button>
+                <Button
+                    fullWidth
+                    onClick={(e) => {
+                        e.stopPropagation()
+                        dispatch(openPopup({name: 'signup'}))
+                    }}
+                    className='login-button'>Sign up
+                </Button>
+                <Button
+                    fullWidth
+                    onClick={() => navigate('/houses')}
+                    className='login-button'>
+                    Skip
+                </Button>
             </div>
             <SignUpPopup/>
         </div>

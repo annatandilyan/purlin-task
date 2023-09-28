@@ -5,8 +5,9 @@ import {useDispatch, useSelector} from "react-redux";
 import {useClickOutsideEffect} from "../../../helpers";
 import {closePopup} from "../../../redux/slices/popupSlice";
 import {createNewHouseThunk} from "../../../redux/thunks/userThunk";
+import Button from "../../Button";
 
-import '../style.css'
+import '../style.scss'
 
 const CreateHousePopup = () => {
     const userId = useSelector(state => state.users.userId)
@@ -57,30 +58,30 @@ const CreateHousePopup = () => {
                 <input
                     className='popup-input'
                     placeholder='Price'
-                    defaultValue={name === 'edit' ? data.price : ''}
+                    defaultValue={name === 'edit' ? data?.price : ''}
                     {...register('price', {required: true})}
                 />
                 <input
                     className='popup-input'
                     placeholder='Rooms'
-                    defaultValue={name === 'edit' ? data.image : ''}
+                    defaultValue={name === 'edit' ? data?.image : ''}
                     {...register('rooms', {required: true})}
                 />
                 <input
                     className='popup-input'
                     placeholder='BathRooms'
-                    defaultValue={name === 'edit' ? data.image : ''}
+                    defaultValue={name === 'edit' ? data?.image : ''}
                     {...register('bathrooms', {required: true})}
                 />
                 <input
                     className='popup-input'
                     placeholder='LivingSqFt'
-                    defaultValue={name === 'edit' ? data.image : ''}
+                    defaultValue={name === 'edit' ? data?.image : ''}
                     {...register('livingSqFt', {required: true})}
                 />
                 <div className='popup-buttons'>
-                    <button>Create</button>
-                    <button onClick={() => dispatch(closePopup())}>Cancel</button>
+                    <Button>Create</Button>
+                    <Button variant="secondary" onClick={() => dispatch(closePopup())}>Cancel</Button>
                 </div>
             </form>
         </div>
