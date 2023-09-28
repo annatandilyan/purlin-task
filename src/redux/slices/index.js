@@ -2,10 +2,10 @@ import {combineReducers} from "@reduxjs/toolkit";
 
 import usersReducer from '../slices/userSlice';
 import popupReducer from '../slices/popupSlice';
-import homesReducer from '../slices/homesSlice';
+import housesReducer from './housesSlice';
 
 const rootReducer = combineReducers({
-   homes:homesReducer,
+   houses:housesReducer,
    popup: popupReducer,
    users: usersReducer,
 })

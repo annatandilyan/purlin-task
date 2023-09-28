@@ -1,9 +1,9 @@
 import {useRoutes} from "react-router-dom";
 
 import LoginPage from "../pages/loginPage";
-import HomesList from "../components/HomesList";
+import HouseList from "../components/HouseList";
 
-const HomeRoutes = () => {
+const HouseRoutes = () => {
 
     const routes = useRoutes([
         {
@@ -11,11 +11,11 @@ const HomeRoutes = () => {
             element: <LoginPage/>
         },
         {
-            path: '/homes',
-            element: <HomesList/>
+            path: '/houses',
+            element: <HouseList/>
         },
     ])
     return routes
 }
 
-export default HomeRoutes
+export default HouseRoutes

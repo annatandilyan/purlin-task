@@ -24,7 +24,7 @@ const SignUpPopup = () => {
     const onSubmit = (data) => {
         name === 'login' ? dispatch(getLoggedInUserThunk(data)) : dispatch(addNewUserThunk(data))
         dispatch(closePopup())
-        navigate('/homes')
+        navigate('/houses')
     }
 
     return (

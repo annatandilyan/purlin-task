@@ -2,35 +2,35 @@ import {useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 
-import SingleHome from "../SingleHome";
-import {getHomesThunk} from "../../redux/thunks/homesThunk";
+import SingleHouse from "../SingleHouse";
+import {getHousesThunk} from "../../redux/thunks/housesThunk";
 
 import './style.css'
-const RealEstateList = () => {
+const HouseList = () => {
     const dispatch = useDispatch()
-    const homes = useSelector(state => state.homes.homes)
+    const houses = useSelector(state => state.houses.houses)
     const userId = useSelector(state => state.users.userId)
     const navigate = useNavigate()
 
     useEffect(() => {
-        dispatch(getHomesThunk())
+        dispatch(getHousesThunk())
     }, [])
 
     return (
         <>
             <div className='title'>
-                <h1>Homes</h1>
+                <h1>Houses</h1>
             </div>
-            {!!userId && <button className='my-homes-button' onClick={() => {
+            {!!userId && <button className='my-houses-button' onClick={() => {
                 navigate('/myProperties')
-            }}>My homes</button>}
+            }}>My houses</button>}
             <div className='container'>
-                {homes?.map((elm, index) => (
-                    <SingleHome {...elm}/>
+                {houses?.map((elm, index) => (
+                    <SingleHouse {...elm}/>
                 ))}
             </div>
         </>
     )
 }
 
-export default RealEstateList
+export default HouseList

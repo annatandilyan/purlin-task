@@ -5,11 +5,11 @@ import {
 } from "../../../requests/index";
 
 export const addNewUserThunk = createAsyncThunk(
-    'RealEstates/addNewUser',
+    'Houses/addNewUser',
     (data) => addNewUser(data)
 )
 export const getLoggedInUserThunk = createAsyncThunk(
-    'RealEstates/getLoggedInUser',
+    'Houses/getLoggedInUser',
     (login, password) => getLoggedInUser(login, password)
 )
 
