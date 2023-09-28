@@ -48,7 +48,7 @@
     {
       "city": "test2",
       "address": "test2",
-      "zip": "test3",
+      "zip": "test8",
       "price": "test4",
       "rooms": "test2",
       "bathrooms": "test2",
@@ -57,13 +57,13 @@
       "id": 4
     },
     {
-      "city": "test2",
-      "address": "test2",
-      "zip": "test8",
-      "price": "test8",
-      "rooms": "test2",
-      "bathrooms": "test2",
-      "livingSqFt": "test",
+      "city": "test3",
+      "address": "test3",
+      "zip": "test5",
+      "price": "test5",
+      "rooms": "test3",
+      "bathrooms": "test3",
+      "livingSqFt": "test3",
       "agentId": "1",
       "id": 5
     }
