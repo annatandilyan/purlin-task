@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.my-homes-button {
+    position: absolute;
+    right: 5px;
+    top:5px;
+    border: none;
+    background-color: transparent;
+    color: steelblue;
+    font-size: 20px;
+
+}
+.title {
+    display: flex;
+    justify-content: center;
+    color: steelblue;
+}

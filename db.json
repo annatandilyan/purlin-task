@@ -7,5 +7,37 @@
       "surname": "Smith",
       "id": 1
     }
+  ],
+  "homes": [
+    {
+      "City": "Los Angeles",
+      "Address": "123 Main Street",
+      "Zip": "90001",
+      "Price": 550000,
+      "Rooms": 3,
+      "Bathrooms": 2,
+      "LivingSqFt": 1600,
+      "Other Details": "Spacious backyard, two-car garage, recently renovated"
+    },
+    {
+      "City": "Los Angeles",
+      "Address": "123 Main Street",
+      "Zip": "90001",
+      "Price": 550000,
+      "Rooms": 3,
+      "Bathrooms": 2,
+      "LivingSqFt": 1600,
+      "Other Details": "Spacious backyard, two-car garage, recently renovated"
+    },
+    {
+      "City": "Los Angeles",
+      "Address": "123 Main Street",
+      "Zip": "90001",
+      "Price": 550000,
+      "Rooms": 3,
+      "Bathrooms": 2,
+      "LivingSqFt": 1600,
+      "Other Details": "Spacious backyard, two-car garage, recently renovated"
+    }
   ]
 }

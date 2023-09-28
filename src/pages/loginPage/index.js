@@ -30,7 +30,7 @@ const LoginPage = () => {
                     dispatch(openPopup({name: 'signup'}))
                 }} className='login-button'>Sign up
                 </button>
-                <button onClick={() => navigate('/properties')} className='login-button'>Scip</button>
+                <button onClick={() => navigate('/homes')} className='login-button'>Skip</button>
             </div>
             <SignUpPopup/>
         </div>

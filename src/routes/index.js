@@ -1,6 +1,7 @@
 import {useRoutes} from "react-router-dom";
 
 import LoginPage from "../pages/loginPage";
+import HomesList from "../components/HomesList";
 
 const HomeRoutes = () => {
 
@@ -8,6 +9,10 @@ const HomeRoutes = () => {
         {
             path:'/',
             element: <LoginPage/>
+        },
+        {
+            path: '/homes',
+            element: <HomesList/>
         },
     ])
     return routes
