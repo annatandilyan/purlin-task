@@ -1,0 +1,53 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.house-card {
+    min-width: 250px;
+    width: 20%;
+    box-shadow: 0px 0px 10px 2px #d7d7d7;
+    border-radius: 5px;
+    padding: 16px;
+    transition: all 0.2s ease-out
+}
+
+.house-card:hover {
+    box-shadow: 0px 0px 10px 2px #c3c3c3;
+}
+
+.house-data {
+    margin: 4px;
+    strong {
+        margin-right: 4px;
+    }
+}
+
+.house-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.house-buttons button {
+    padding: 6px;
+    border-radius: 3px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.house-buttons button:hover {
+    background-color: lightgray;
+}
+
+.house-buttons .button-remove {
+    margin-left: 24px;
+    background-color: red;
+    color: white;
+}
+
+.house-buttons .button-remove:hover {
+    background-color: #e31c1c;
+}

@@ -3,11 +3,12 @@ import {useForm} from "react-hook-form";
 import {useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 
+import Button from "../../Button";
 import {useClickOutsideEffect} from "../../../helpers";
 import {closePopup} from "../../../redux/slices/popupSlice";
 import {addNewUserThunk, getLoggedInUserThunk} from "../../../redux/thunks/userThunk";
 
-import '../style.css'
+import '../style.scss'
 const SignUpPopup = () => {
     const {name} = useSelector(state => state.popup)
 
@@ -67,8 +68,8 @@ const SignUpPopup = () => {
                     />
                 </div>
                 <div className='popup-buttons'>
-                    <button>{name === 'signup' ? 'SignUp' : 'Login'}</button>
-                    <button onClick={() => dispatch(closePopup())}>Cancel</button>
+                    <Button>{name === 'signup' ? 'Sign Up' : 'Login'}</Button>
+                    <Button variant="secondary" onClick={() => dispatch(closePopup())}>Cancel</Button>
                 </div>
             </form>
         </div>

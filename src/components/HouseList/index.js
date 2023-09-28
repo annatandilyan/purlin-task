@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import SingleHouse from "../SingleHouse";
 import {getHousesThunk} from "../../redux/thunks/housesThunk";
 
-import './style.css'
+import './style.scss'
 const HouseList = () => {
     const dispatch = useDispatch()
     const houses = useSelector(state => state.houses.houses)
@@ -18,13 +18,13 @@ const HouseList = () => {
 
     return (
         <>
-            <div className='title'>
+            <header className='header'>
                 <h1>Houses</h1>
-            </div>
-            {!!userId && <button className='my-houses-button' onClick={() => {
-                navigate('/my-houses')
-            }}>My houses</button>}
-            <div className='container'>
+                    {!!userId && <button className='my-houses-button' onClick={() => {
+                        navigate('/my-houses')
+                    }}>My houses</button>}
+            </header>
+            <div className='house-list-container'>
                 {houses?.map((elm, index) => (
                     <SingleHouse {...elm}/>
                 ))}

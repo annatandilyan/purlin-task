@@ -1,19 +1,17 @@
 .login-buttons {
-    display: grid;
+    display: flex;
     justify-content: center;
-    grid-auto-flow: row;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 0 auto;
+    width: 340px;
 }
 .login-title {
     text-align: center;
     color: skyblue;
 }
-.login-button {
-    border: none;
-    background-color: transparent;
-    color: steelblue;
-    font-size: 17px;
-    margin: 5px;
-}
+
 .desc {
     text-align: center;
     margin: 50px 100px 30px 100px;
