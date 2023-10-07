@@ -12,11 +12,11 @@
     {
       "id": 1,
       "agentId": "1",
-      "city": "test1211111",
+      "city": "test888888",
       "address": "test5",
       "zip": "test5",
       "price": "test5",
-      "rooms": "test8",
+      "rooms": "test10",
       "bathrooms": "2",
       "livingSqFt": "1600",
       "Other Details": "Spacious backyard, two-car garage, recently renovated"
@@ -45,15 +45,27 @@
       "id": 4
     },
     {
-      "city": "test1211111",
+      "city": "test2222222",
       "address": "test5",
       "zip": "test5",
-      "price": "test5",
+      "price": "h",
       "rooms": "test8",
       "bathrooms": "t",
       "livingSqFt": "test5",
       "agentId": "1",
-      "id": 5
+      "id": 5,
+      "data": {}
+    },
+    {
+      "city": "test4",
+      "address": "test4",
+      "zip": "test4",
+      "price": "test4",
+      "rooms": "test4",
+      "bathrooms": "test4",
+      "livingSqFt": "test4",
+      "agentId": "1",
+      "id": 6
     }
   ]
 }

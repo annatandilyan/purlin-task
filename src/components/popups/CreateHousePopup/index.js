@@ -1,5 +1,5 @@
 import React from "react";
-import {useForm} from "react-hook-form";
+import {Controller, useForm} from "react-hook-form";
 import {useDispatch, useSelector} from "react-redux";
 
 import Button from "../../Button";
@@ -19,6 +19,8 @@ const CreateHousePopup = () => {
         register,
         handleSubmit,
         formState: {errors},
+        control,
+        setValue,
     } = useForm();
 
     useClickOutsideEffect(!!name, ()=>dispatch(closePopup()))
@@ -31,64 +33,120 @@ const CreateHousePopup = () => {
         <div className={`popup ${name === 'create' ? 'open' : ''}`}>
             <form className="popup-content" onSubmit={handleSubmit(createHouse)}>
                 <div>
-                    {errors.city && <p className="errorMessage"> City is required</p>}
-                    <input
+                    {errors.city && <span className="errorMessage"> City is required</span>}
+                    <Controller
                         className='popup-input'
-                        placeholder='City'
-                        {...register('city', {required: true})}
+                        name='City'
+                        control={control}
+                        {...register('city', {
+                            required: true
+                        })}
+                        render={({field}) =>
+                            <input
+                                {...field}
+                                placeholder='City'
+                            />
+                    }
                     />
                 </div>
                 <div>
                     {errors.address && <p className="errorMessage"> Address is required</p>}
-                    <input
+                    <Controller
                         className='popup-input'
-                        placeholder='Address'
-                        {...register('address', {required: true})}
+                        name='Address'
+                        control={control}
+                        {...register('address', {
+                            required: true,
+                        })}
+                        render={({field}) =>
+                            <input
+                                placeholder={'Address'}
+                                {...field}
+                            />}
                     />
                 </div>
                 <div>
                     {errors.zip && <p className="errorMessage"> Zip is required</p>}
-                    <input
+                    <Controller
                         className='popup-input'
-                        placeholder='Zip'
-                        {...register('zip', {required: true})}
+                        name='Zip'
+                        control={control}
+                        {...register('zip', {
+                            required: true,
+                        })}
+                        render={({field}) =>
+                            <input
+                                {...field}
+                                placeholder={'Zip'}
+                            />}
                     />
                 </div>
-
                 <div>
                     {errors.price && <p className="errorMessage"> Price is required</p>}
-                    <input
+                    <Controller
                         className='popup-input'
-                        placeholder='Price'
-                        {...register('price', {required: true})}
+                        name='Price'
+                        control={control}
+                        {...register('price', {
+                            required: true,
+                        })}
+                        render={({field}) =>
+                            <input
+                                placeholder={'Price'}
+                                {...field}
+                            />}
                     />
                 </div>
                 <div>
                     {errors.rooms && <p className="errorMessage"> Rooms is required</p>}
-                    <input
+                    <Controller
                         className='popup-input'
-                        placeholder='Rooms'
-                        {...register('rooms', {required: true})}
+                        name='Rooms'
+                        control={control}
+                        {...register('rooms', {
+                            required: true,
+                        })}
+                        render={({field}) =>
+                            <input
+                                {...field}
+                                placeholder={'Rooms'}
+                            />}
                     />
                 </div>
                 <div>
                     {errors.bathrooms && <p className="errorMessage"> Bathrooms is required</p>}
-                    <input
+                    <Controller
                         className='popup-input'
-                        placeholder='Bathrooms'
-                        {...register('bathrooms', {required: true})}
+                        name='Bathrooms'
+                        control={control}
+                        {...register('bathrooms', {
+                            required: true,
+                        })}
+                        render={({field}) =>
+                            <input
+                                {...field}
+                                placeholder={'Bathrooms'}
+                            />}
                     />
                 </div>
                 <div>
                     {errors.livingSqFt && <p className="errorMessage"> LivingSqFt is required</p>}
-                    <input
+                    <Controller
                         className='popup-input'
-                        placeholder='LivingSqFt'
-                        {...register('livingSqFt', {required: true})}
+                        name='LivingSqFt'
+                        control={control}
+                        {...register('livingSqFt', {
+                            required: true,
+                        })}
+                        render={({field}) =>
+                            <input
+                                {...field}
+                                placeholder={'LivingSqFt'}
+                            />}
                     />
                 </div>
                 <div className='popup-buttons'>
-                    <Button>Create</Button>
+                    <Button>Save</Button>
                     <Button variant="secondary" onClick={() => dispatch(closePopup())}>Cancel</Button>
                 </div>
             </form>
